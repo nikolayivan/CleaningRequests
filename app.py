@@ -51,7 +51,9 @@ container_7 = st.empty()
 container_8 = st.empty()
 container_9 = st.empty()
 
-
+if 'radio_option' not in st.session_state:
+    st.session_state.radio_option = 'Шаг 1'
+    
 if 'count' not in st.session_state:
     st.session_state.count = 0
     
@@ -105,8 +107,9 @@ if next:
     else:
         st.session_state.radio_option = 'Шаг 1'
 
-option = st.sidebar.radio("Навигация", option_names , key="radio_option")
+# option = st.sidebar.radio("Навигация", option_names , key="radio_option")
 # st.session_state
+option = st.session_state.radio_option
 
 
 if option == 'Шаг 1':
