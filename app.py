@@ -22,15 +22,15 @@ sheet = service.spreadsheets()
 
 tz = pytz.timezone('Europe/Moscow')
 
-LogoPath =  r'\images\logoYldiz.png'
+LogoPath =  'logoYldiz.png'
 
-Img_1 = r'\images\1.jpg'
-Img_2 = r'\images\2.jpg'
-Img_3 = r'\images\3.jpg'
-Img_4 = r'\images\4.jpg'
-Img_5 = r'\images\5.jpg'
-Img_6 = r'\images\6.jpg'
-Img_7 = r'\images\7.jpg'
+Img_1 = '1.jpg'
+Img_2 = '2.jpg'
+Img_3 = '3.jpg'
+Img_4 = '4.jpg'
+Img_5 = '5.jpg'
+Img_6 = '6.jpg'
+Img_7 = '7.jpg'
 
 
 col1, col2, col3 = st.beta_columns(3)
