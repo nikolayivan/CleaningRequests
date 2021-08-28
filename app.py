@@ -36,7 +36,7 @@ Img_8 = '8.png'
 col1, col2, col3 = st.beta_columns(3)
 with col2:
     image = Image.open(LogoPath)
-    st.image(image, width=250)
+    st.image(image, width=200)
 
 
 option_names = ["Шаг 1", "Шаг 2", "Шаг 3", "Шаг 4", "Шаг 5", "Шаг 6"]
@@ -117,7 +117,7 @@ if option == 'Шаг 1':
     container_1.title('Вас приветствует *Юлдыз-Клининг!* 👋')
   
     image = Image.open(Img_5)
-    container_2.image(image, width=550)
+    container_2.image(image, width=300)
     
     container_3.write('Для экономии Вашего времени мы предлагаем воспользоваться онлайн заявкой. Чтобы продолжить нажмите *Далее*.')
 
@@ -127,7 +127,7 @@ elif option == 'Шаг 2':
     container_1.title('Расскажите нам про Ваш объект :house:')
 
     image = Image.open(Img_2)
-    container_2.image(image, width=600)
+    container_2.image(image, width=300)
     
     col1, col2 = st.beta_columns(2)
     with col1:
@@ -144,7 +144,7 @@ elif option == 'Шаг 3':
     container_1.title('Какие у Вас будут еще пожелания?')
     
     image = Image.open(Img_3)
-    container_2.image(image, width=500)
+    container_2.image(image, width=300)
     container_3.write('Выберите один или несколько вариантов из дополнительных услуг:')
     
     col1, col2 = st.beta_columns(2)
@@ -158,7 +158,7 @@ elif option == 'Шаг 4':
     container_1.title('Укажите дату и Ваши контакты')
     
     # image = Image.open(Img_7)
-    # container_2.image(image, width=550)
+    # container_2.image(image, width=300)
     
     st.session_state.Date = container_3.date_input("Выберите удобный для Вас день:", datetime.datetime.now(tz))
     
@@ -172,7 +172,7 @@ elif option == 'Шаг 4':
 elif option == 'Шаг 5':
     
     image = Image.open(Img_6)
-    container_1.image(image, width=550)
+    container_1.image(image, width=300)
     
     st.balloons()
     time.sleep(1.5)
@@ -203,5 +203,5 @@ elif option == 'Шаг 5':
 elif option == 'Шаг 6':
     image = Image.open(Img_8)
     container_1.title('Желаем Вам хорошего дня!')
-    container_2.image(image, width=550)
+    container_2.image(image, width=300)
     
