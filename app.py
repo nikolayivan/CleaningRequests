@@ -31,7 +31,7 @@ Img_4 = '4.jpg'
 Img_5 = '5.jpg'
 Img_6 = '6.jpg'
 Img_7 = '7.jpg'
-
+Img_8 = '8.png'
 
 col1, col2, col3 = st.beta_columns(3)
 with col2:
