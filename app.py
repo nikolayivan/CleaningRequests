@@ -39,7 +39,7 @@ with col2:
     st.image(image, width=250)
 
 
-option_names = ["Шаг 1", "Шаг 2", "Шаг 3", "Шаг 4", "Шаг 5"]
+option_names = ["Шаг 1", "Шаг 2", "Шаг 3", "Шаг 4", "Шаг 5", "Шаг 6"]
     
 container_1 = st.empty()
 container_2 = st.empty()
@@ -100,6 +100,8 @@ if next:
         st.session_state.radio_option = 'Шаг 4'
     elif st.session_state["radio_option"] == 'Шаг 4':
         st.session_state.radio_option = 'Шаг 5'
+    elif st.session_state["radio_option"] == 'Шаг 5':
+        st.session_state.radio_option = 'Шаг 6'
     else:
         st.session_state.radio_option = 'Шаг 1'
 
@@ -136,7 +138,7 @@ elif option == 'Шаг 2':
 
 elif option == 'Шаг 3':
     
-    container_1.title('Какие будут у Вас еще пожелания?')
+    container_1.title('Какие у Вас будут еще пожелания?')
     
     image = Image.open(Img_3)
     container_2.image(image, width=500)
@@ -146,7 +148,7 @@ elif option == 'Шаг 3':
     with col1:
         st.session_state.Windows = container_4.checkbox('Мойка окн', value = False)
         st.session_state.Chemic = container_5.checkbox('Химчистка мебели', value = False)
-        st.session_state.Extra = container_6.checkbox('Помыть что-то еще, например духовую печь или холодильник...', value = False)
+        st.session_state.Extra = container_6.checkbox('Помыть что-то еще, например, духовую печь или холодильник...', value = False)
 
 elif option == 'Шаг 4':
     
@@ -173,7 +175,7 @@ elif option == 'Шаг 5':
     time.sleep(1.5)
 
     container_2.success('Мы получили Вашу заявку!:smile:')
-    container_3.success('В ближайщее время с Вами свяжется наш менеджер👩‍ Оставайтесь на связи!')
+    container_3.success('В ближайщее время с Вами свяжется наш менеджер. Оставайтесь на связи!')
     
     df0 = pd.DataFrame({'Статус': ['Сформирована'],
                         'Дата формирования': [datetime.datetime.now(tz).strftime("%d-%b-%Y")],
@@ -193,5 +195,10 @@ elif option == 'Шаг 5':
     request = sheet.values().append(spreadsheetId=SPREADSHEET_ID, range='Sheet1!A1:DZ', valueInputOption='USER_ENTERED', insertDataOption='INSERT_ROWS', body={'values':data})
     response = request.execute()
     
-    container_4.write(df0)
+    # container_4.write(df0)
+    
+elif option == 'Шаг 6':
+    image = Image.open(Img_8)
+    container_1.title('Желаем Вам хорошего дня!')
+    container_2.image(image, width=550)
     
