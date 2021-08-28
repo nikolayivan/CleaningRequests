@@ -160,13 +160,13 @@ elif option == 'Шаг 4':
     # image = Image.open(Img_7)
     # container_2.image(image, width=300)
     
-    st.session_state.Date = container_3.date_input("Выберите удобный для Вас день:", datetime.datetime.now(tz))
-    
     col1, col2 = st.beta_columns(2)
     with col1:
-        st.session_state.Name = container_4.text_input(label='Укажите Ваше имя 😊', help='Нам важно знать как к Вам обращаться :smile:')  
+        st.session_state.Name = container_3.text_input(label='Укажите Ваше имя 😊', help='Нам важно знать как к Вам обращаться :smile:')  
     with col2:
-        st.session_state.Phone = container_5.text_input('Укажите свой номер телефона ☎️', help='Мы перезвоним Вам по вашему номеру :smile:')
+        st.session_state.Phone = container_4.text_input('Укажите свой номер телефона ☎️', help='Мы перезвоним Вам по вашему номеру :smile:')
+        
+    st.session_state.Date = container_5.date_input("Выберите удобный для Вас день:", datetime.datetime.now(tz))
 
     
 elif option == 'Шаг 5':
